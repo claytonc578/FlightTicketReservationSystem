@@ -11,3 +11,6 @@ def home(request):
         'flights': Flight.objects.all()
     }
     return render(request, 'reservation/home.html', context)
+
+def about(request):
+    return render(request, 'reservation/about.html')

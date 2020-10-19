@@ -10,10 +10,14 @@ class Passenger(models.Model):
         return "{} {}".format(self.first_name, self.last_name)
 
 class Plane(models.Model):
+    plane_number = models.IntegerField(default=0)
     rows = models.IntegerField(default=0)
     width = models.IntegerField(default=0)
     reserved = models.IntegerField(default=0)
     passenger = models.ForeignKey(Passenger, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return "Plane {}".format(self.plane_number)
 
 class Flight(models.Model):
     flight_number = models.IntegerField(default=0)
