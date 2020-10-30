@@ -1,7 +1,7 @@
 from django.contrib import admin
 
-from .models import Passenger, Plane, Flight
+from .models import Plane, Flight, Ticket
 
-admin.site.register(Passenger)
 admin.site.register(Plane)
 admin.site.register(Flight)
+admin.site.register(Ticket)

@@ -5,7 +5,7 @@
     <article class="media content-section">
       <div class="media-body">
         <div class="article-metadata">
-          <a class="mr-2" href="#">Flight #{{ flight.flight_number }}</a>
+          <a class="mr-2" href="{% url 'flight-detail' flight.id %}">Flight #{{ flight.flight_number }}</a>
         </div>
         <p class="article-content">Origin: {{ flight.origin }}</p>
         <p class="article-content">Destination: {{ flight.destination }}</p>

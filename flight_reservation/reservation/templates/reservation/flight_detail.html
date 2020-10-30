@@ -1,0 +1,15 @@
+{% extends "reservation/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+  <article class="media content-section">
+    <div class="media-body">
+      <div class="article-metadata">
+        <a class="article-title" href="#">Flight #{{ object.flight_number }}</a>
+      </div>
+      <p class="article-content">Origin: {{ object.origin }}</p>
+      <p class="article-content">Destination: {{ object.destination }}</p>
+      <a class="btn btn-outline-info" href="{% url 'reservation-reserve' %}">Reserve Seat</a>
+    </div>
+  </article>
+{% endblock content %}
